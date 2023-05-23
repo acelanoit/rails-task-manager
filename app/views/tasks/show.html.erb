@@ -1,4 +1,4 @@
 <h1>Here you can see the details of the specific to-do item:</h1>
-<%= "#{@task.title} - #{@task.details}" %><%= link_to 'Edit', edit_path(@task.id) %><%= link_to 'Delete', task_path(@task.id),
+<%= "#{@task.title} - #{@task.details}" %><input type='checkbox' <%= @task.completed ? "checked" : "" %>><%= link_to 'Edit', edit_path(@task.id) %><%= link_to 'Delete', task_path(@task.id),
   data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
 </ul>
